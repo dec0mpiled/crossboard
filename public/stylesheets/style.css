@@ -96,4 +96,5 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-size: auto;
+  background-attachment: fixed;
 }
