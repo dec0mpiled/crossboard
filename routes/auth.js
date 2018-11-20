@@ -51,12 +51,11 @@ router.post('/login', function(req, res, next) {
   passport.authenticate('local', function(err, user, info) {
     if (err) { return next(err); }
 
-    if (!user) { return res.render("index", { info: "That user does not exist!", active: 'login', title: 'Login - XBoard'}); }
+    if (!user) { return res.render("index", { info: "Username or password incorrect!", active: 'login', title: 'Login - XBoard'}); }
 
     req.logIn(user, function(err) {
       if (err) { return next(err); }
-      var hour = 3600000;
-      req.session.cookie.maxAge = 14 * 24 * hour; //2 weeks
+      req.session.cookie.maxAge = 2592000000; //1 Month
       return res.redirect('/');
     });
   })(req, res, next);

@@ -27,6 +27,22 @@ router.get('/register', function(req, res, next) {
   res.render('register', { title: 'Register - XBoard' });
 });
 
+router.get('/remove/:id', function(req, res, next) {
+   
+   Post.findOne({_id:req.params.id}, function(err, post) {
+       
+       console.log(post);
+       
+       if (err) throw err;
+      
+      post.delete(); 
+       
+   }); 
+   
+   res.redirect("/");
+    
+});
+
 router.post("/create", function(req, res, next) {
    
    var NewPost = new Post ({
