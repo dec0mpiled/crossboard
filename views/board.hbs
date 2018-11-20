@@ -17,12 +17,12 @@
   <div class="form" style = "">
       
       <h3>Your Pastes</h3>
-    
+    <p id="copytag" style="display:none;color:green"><i>copied successfully!</i></p>
 
     
       {{#each posts}}
       
-      <div style = "border:1px dashed #94C2CF; padding-left:5%;padding-right:5%;word-wrap: break-word;">
+      <div class = "mp" style = "border:1px dashed #94C2CF; padding-left:5%;padding-right:5%;word-wrap: break-word;" onclick="copy()" data-clipboard-text="{{content}}">
           
           <h3>{{content}}</h3>
           
@@ -32,7 +32,6 @@
       
       {{/each}}
     
-
 </div>
 
 
@@ -65,4 +64,21 @@
         this.rows = minRows + rows;
     });
         
+    </script>
+    
+        <script src="../javascripts/clipboard.min.js"></script>
+
+    <!-- 3. Instantiate clipboard by passing a string selector -->
+    <script>
+    var clipboard = new Clipboard('.mp');
+    clipboard.on('success', function(e) {
+        console.log(e);
+    });
+    clipboard.on('error', function(e) {
+        console.log(e);
+    });
+    
+    function copy() {
+        document.getElementById("copytag").style.display = "block"
+    }
     </script>
