@@ -11,6 +11,8 @@ router.get('/', function(req, res, next) {
         
             Post.find({author:req.user.username}, function(err, myposts) {
       if (err) throw err;
+      
+      myposts = myposts.reverse();
         
         res.render('board', { title: 'My XBoard', posts:myposts});
         
