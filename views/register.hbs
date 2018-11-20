@@ -7,23 +7,23 @@
 <center>
     
     
-    <h1 style = "padding-top:3%; color:white;">Welcome to XBoard!</h1>
+    <h1 style = "padding-top:3%; color:white;">Welcome to {{title}}!</h1>
     <p style = "color:white;">the simplest cross-platform copy and paste bin</p>
     
 
 <div class="login-page">        
   <div class="form">
       
-      <h3>Login to XBoard</h3>
-    
+      <h3>Create an account with XBoard</h3>
 
-    <form class="login-form" action="/auth/login" method="post">
+    <form class="login-form" action="/auth/register" method="post">
       <input type="text" name = "username" placeholder="username"/>
       <input type="password" name = "password" placeholder="password"/>
-      <button>login</button>
-      <p class="message">Not registered? <a href="/register">Create an account</a></p>
+      <button>create</button>
+      <p class="message">Already registered? <a href="/">Log In</a></p>
       {{#if info}}<p style = "color:red">{{info}}</p>{{/if}}
     </form>
+    
 
 </div>
 

@@ -7,10 +7,19 @@
   },
   "dependencies": {
     "cookie-parser": "~1.4.3",
+    "csshake": "^1.5.3",
     "debug": "~2.6.9",
     "express": "~4.16.0",
-    "hbs": "~4.0.1",
+    "express-session": "^1.15.6",
+    "handlebars-intl": "^1.1.2",
+    "hbs": "^4.0.1",
     "http-errors": "~1.6.2",
-    "morgan": "~1.9.0"
+    "mongo": "^0.1.0",
+    "mongodb": "^3.1.10",
+    "mongoose": "^5.3.12",
+    "morgan": "~1.9.0",
+    "passport": "^0.4.0",
+    "passport-local": "^1.0.0",
+    "passport-local-mongoose": "^5.0.1"
   }
 }
