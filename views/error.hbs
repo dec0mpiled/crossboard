@@ -1,3 +1,16 @@
-<h1>{{message}}</h1>
-<h2>{{error.status}}</h2>
-<pre>{{error.stack}}</pre>
+{{#ifeq error.status 404}}
+
+<center>
+    
+    <h2 style = "margin-top:10%">{{error.status}}</h2>
+    <h1>Aw dang! You messed it all up!</h1>
+    <h4>Just kidding, the open button only works for links :)</h4>
+    
+    
+    <h4><a href = "/">Get me outta here!</a></h4>
+    
+    
+    
+</center>
+
+{{/ifeq}}

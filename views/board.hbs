@@ -22,15 +22,20 @@
     {{#if posts}}
       {{#each posts}}
       
-      <form action="/remove/{{id}}" method="get">
       <div style = "border:1px dashed #94C2CF; padding-left:5%;padding-right:5%;word-wrap: break-word;">
           
-          <h3 class = "mp" onclick="copy()" data-clipboard-text="{{content}}">{{content}}</h3>
+          <h3 >{{content}}</h3>
           
+
+          <button onclick="location.href='{{{content}}}'" style = "width:48%;margin-bottom:3%;float:left">open (for urls)</button>
+
+          <button style = "width:48%;margin-bottom:3%;float:right" class = "mp" onclick="copy()" data-clipboard-text="{{content}}">copy</button>
+          
+          <form action="/remove/{{id}}" method="get">
           <button style = "width:100%;margin-bottom:3%">delete</button>
+          </form>
           
       </div>
-      </form>
       
       <br>
       
